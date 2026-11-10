@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eric Marion</title>
+<meta name="description" content="Eric Marion designs programming languages with restricted dependent types: Sleight and Pledge.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #fbfaf7; --fg: #1d1c1a; --muted: #6b675f; --rule: #e4e0d8; --accent: #8a3b12; --card: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #161513; --fg: #ebe7df; --muted: #a29d93; --rule: #2e2c28; --accent: #e3a27a; --card: #1d1c19; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 400 1.15rem/1.6 "Newsreader", Georgia, serif;
+}
+main { max-width: 40rem; margin: 0 auto; padding: 4.5rem 1rem 3rem; }
+h1 { font-weight: 600; font-size: 2.3rem; line-height: 1.15; margin: 0 0 .4rem; letter-spacing: -.01em; }
+.links { color: var(--muted); font-size: 1rem; margin: 0 0 2.5rem; }
+.links a { color: var(--muted); }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .18em; }
+a:hover { text-decoration-thickness: 2px; }
+h2 {
+  font: 400 .8rem/1 "JetBrains Mono", ui-monospace, monospace; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--muted); margin: 3rem 0 1rem; padding-bottom: .6rem; border-bottom: 1px solid var(--rule);
+}
+.project { margin: 0 0 2rem; }
+.project h3 { font-size: 1.45rem; font-weight: 600; margin: 0 0 .3rem; }
+.project p { margin: 0 0 .6rem; }
+.meta { font: 400 .85rem/1.6 "JetBrains Mono", ui-monospace, monospace; display: flex; flex-wrap: wrap; gap: .3rem 1.2rem; }
+.meta a { color: var(--fg); text-decoration-color: var(--rule); }
+.meta a:hover { color: var(--accent); text-decoration-color: currentColor; }
+code { font: 400 .85em "JetBrains Mono", ui-monospace, monospace; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Eric Marion</h1>
+    <p class="links">
+      <a href="https://github.com/emmarion">GitHub</a> ·
+      <a href="https://orcid.org/0009-0004-8519-6942">ORCID 0009-0004-8519-6942</a>
+    </p>
+  </header>
+
+  <p>
+    I design programming languages with restricted dependent types. <strong>Sleight</strong> pairs Kernel-style
+    dynamism with static types: multiplicities on every binder, a termination check with no escape, and LLMs as
+    intended authors. It is self-hosting and compiles to OCaml. <strong>Pledge</strong>, loosely based on Sleight,
+    is a small teaching language whose browser editor shows what the type checker knows at every point of a program.
+  </p>
+
+  <h2>Projects</h2>
+
+  <section class="project">
+    <h3><a href="https://emmarion.github.io/pledge/">Pledge</a></h3>
+    <p>
+      A small language for learning restricted dependent types. It runs in the browser, with a tutorial
+      that goes from <code>Nat</code> to proofs about addition and multiplication.
+    </p>
+    <div class="meta">
+      <a href="https://emmarion.github.io/pledge/">editor</a>
+      <a href="https://emmarion.github.io/pledge/tutorial.html">tutorial</a>
+      <a href="https://github.com/emmarion/pledge">source</a>
+      <a href="https://doi.org/10.5281/zenodo.24092650">doi:10.5281/zenodo.24092650</a>
+    </div>
+  </section>
+
+  <section class="project">
+    <h3><a href="https://github.com/emmarion/sleight">Sleight</a></h3>
+    <p>
+      An s-expression language with restricted dependent types, a multiplicity on every binder
+      (<code>erased</code>, <code>many</code> or <code>unique</code>), and a termination check with no escape.
+      It has a reference implementation in OCaml, a self-hosting compiler to OCaml, and a Lean model of a fragment.
+    </p>
+    <div class="meta">
+      <a href="https://github.com/emmarion/sleight">source</a>
+      <a href="https://doi.org/10.5281/zenodo.23361871">doi:10.5281/zenodo.23361871</a>
+    </div>
+  </section>
+</main>
+</body>
+</html>
